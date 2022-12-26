@@ -1,5 +1,5 @@
 <template>
-    <b-table :data="data" :columns="columns"></b-table>
+    <b-table :data="data" :columns="columns" @click="editRow($event)"></b-table>
 </template>
 
 <script>
@@ -38,6 +38,15 @@
                         label: 'Gender',
                     }
                 ]
+            }
+        },
+        methods: {
+            editRow(row)
+            {
+                console.log(row.first_name)
+                console.log(row.date)
+                console.log(row.last_name)
+                console.log(row.gender)
             }
         }
     }
